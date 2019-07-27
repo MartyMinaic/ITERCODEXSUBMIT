@@ -10,13 +10,14 @@ class fibonacci
     {
         long a=0l, b=1l;
         long t=0l;
-        System.out.println(a);
+        long s=0;
         while(b<4000000)
         {
-            System.out.println(b);
+            s=s+b;
             t=b;
             b=a+b;
             a=t;
         }
+        System.out.print(s);
     }
 }
