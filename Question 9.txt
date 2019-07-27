@@ -29,6 +29,6 @@ class pythagoreanTriplet
                 }
             }
         }
-        System.out.print(p+"X"+p+"+"+q+"X"+q+"="+r+"X"+r);
+        System.out.print(p*q*r);
     }
 }
