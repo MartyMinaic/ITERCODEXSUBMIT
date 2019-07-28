@@ -1,12 +1,12 @@
 /*A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 
 Find the largest palindrome made from the product of two 3-digit numbers.*/
-class palindrome
-{
-    public static void main(String args[])
-    {
+class palindrome 
+{ 
+    public static void main (String[] args)  
+    { 
         palindrome ob = new palindrome();
-        long ans=0l,t=0l;
+        int ans=0,t=0;
         int a=0, b=0;
         for(a=0; a<999; a++)
         {
@@ -23,21 +23,25 @@ class palindrome
             }
         }
         System.out.print(ans);
-    }
-    /*convets the long data type into string so as to take out digit one by one from the number*/
-    boolean check(long a)
+    } 
+    int rev(int n, int temp) 
+    { 
+        // base case 
+        if (n == 0) 
+            return temp; 
+      
+        // stores the reverse 
+        // of a number 
+        temp = (temp * 10) + (n % 10); 
+      
+        return rev(n / 10, temp); 
+    } 
+    boolean check(int l)
     {
-        boolean k=false;
-        String s=Long.toString(a),temp="";
-        for(int b=0; b<s.length(); b++)
+        if(l==rev(l,0))
         {
-            char ch=s.charAt(b);
-            temp=ch+temp;
+            return true;
         }
-        if(temp.equalsIgnoreCase(s))
-        {
-            k=true;
-        }
-        return k;
+        return false;
     }
-}
+} 
