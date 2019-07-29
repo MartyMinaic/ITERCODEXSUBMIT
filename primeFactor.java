@@ -16,6 +16,7 @@ class primeFactor
             }
             b++;
         }
+        b--;
         System.out.println(b);
     }
 }
