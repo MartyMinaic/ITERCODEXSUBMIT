@@ -5,27 +5,30 @@ class prime10001st
 {
     public static void main(String args[])
     {
+        prime10001st ob = new prime10001st();
         int ct=0,n=1;
         while(ct<10001)
         {
-            int t=0,a=1;
             n++;
-            while(a<=n)
-            {
-                if(n%a==0)
-                {
-                    t++;
-                }
-                a++;
-                //This has been done to reduce the execution time if t<2 => the number is not a prime number
-                if(t>2)
-                break;
-            }
-            if(t<=2)
-            {
-                ct++;
-            }
+            if(ob.isPrime(n))
+            ct++;
         }
         System.out.println(n);
+    }
+    boolean isPrime(long n)
+    {
+        if(n < 2) 
+        return false;
+        if(n == 2 || n == 3) 
+        return true;
+        if(n%2 == 0 || n%3 == 0) 
+        return false;
+        long sqrtN = (long)Math.sqrt(n)+1;
+        for(long i = 6L; i <= sqrtN; i += 6) 
+        {
+            if(n%(i-1) == 0 || n%(i+1) == 0) 
+            return false;
+        } 
+        return true;
     }
 }
