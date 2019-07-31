@@ -8,9 +8,9 @@ class palindrome
         palindrome ob = new palindrome();
         int ans=0,t=0;
         int a=0, b=0;
-        for(a=0; a<999; a++)
+        for(a=100; a<999; a++)
         {
-            for(b=0; b<999; b++)
+            for(b=100; b<999; b++)
             {
                 t=a*b;
                 if(ob.check(t))
