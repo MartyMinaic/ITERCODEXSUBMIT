@@ -13,6 +13,7 @@ class fibonacci
         long s=0;
         while(b<4000000)
         {
+            if(b%2==0)
             s=s+b;
             t=b;
             b=a+b;
