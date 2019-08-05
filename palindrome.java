@@ -8,10 +8,14 @@ class palindrome
         palindrome ob = new palindrome();
         int ans=0,t=0;
         int a=0, b=0;
-        for(a=100; a<999; a++)
+        for(a=100; a<=999; a++)
         {
-            for(b=100; b<999; b++)
+            for(b=100; b<=999; b++)
             {
+                /* 
+                 * Computers are fast, so we can implement this solution directly without any clever math.
+                 * Note that the maximum product is 999 * 999, which fits in a Java int type.
+                 */
                 t=a*b;
                 if(ob.check(t))
                 {
