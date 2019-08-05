@@ -14,19 +14,17 @@ class pythagoreanTriplet
         {
             for(b=1; b<1000; b++)
             {
-                for(c=1; c<1000; c++)
+                c=(int)Math.sqrt(a*a+b*b);
+                if((a+b+c)!=1000)
                 {
-                    if((a+b+c)!=1000)
-                    {
-                        continue;
-                    }
-                    if((Math.pow(a,2)+Math.pow(b,2))==Math.pow(c,2))
-                    {
-                        p=a;
-                        q=b;
-                        r=c;
-                    }
+                    continue;
                 }
+                if((Math.pow(a,2)+Math.pow(b,2))==Math.pow(c,2))
+                {
+                    p=a;
+                    q=b;
+                    r=c;
+                }                
             }
         }
         System.out.print(p*q*r);
