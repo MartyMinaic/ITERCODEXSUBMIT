@@ -1,10 +1,10 @@
 /*The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 Find the sum of all the primes below two million.*/
-class sumOfPrime
+class question10
 {
     public static void main(String[] args)
     {
-        sumOfPrime ob = new sumOfPrime();
+        question10 ob = new question10();
         long s=0;
         for(int a=2;a<2000000;a++)
         {
