@@ -4,7 +4,7 @@
 
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 */
-class fibonacci
+class question2
 {
     public static void main(String args[])
     {
