@@ -14,7 +14,7 @@ class question4
             {
                 /* 
         	 * Computers are fast, so we can implement this solution directly without any clever math.
-        	 * Note that the maximum product is 999 * 999, which fits in a Java int type.
+        	 * Note that the maximum product is 899 * 899, which fits in a Java int type.
         	 */
                 t=a*b;
                 if(ob.check(t))
