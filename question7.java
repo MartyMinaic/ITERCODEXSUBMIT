@@ -6,27 +6,28 @@ class question7
     public static void main(String args[])
     {
         question7 ob = new question7();
-        int ct=1,n=1;
-        boolean k=false;
-        while(ct<10000)
+        int ans=3,a=3,no=2;
+        while(no<10001)
         {
-            n++;            
-            k=true;
-            if(n < 2) 
-            k=false;
-            if(n == 2 || n == 3) 
-            k=true;
-            if(n%2 == 0 || n%3 == 0) 
-            k=false;
-            long sqrtN = (long)Math.sqrt(n)+1;
-            for(long i = 6L; i <= sqrtN; i += 6) 
-            {
-                if(n%(i-1) == 0 || n%(i+1) == 0) 
-                k=false;
-            } 
-            if(k)
-            ct++;
+           a=a+2;
+           ans=a;    
+           if(ob.checkPrime(a))
+           {
+               no++;      
+           } 
         }
-        System.out.println(n);
+        System.out.println(ans);
+    }
+    boolean checkPrime(int inp)
+    {    
+        if(inp%2==0)
+            return false;    
+        for (int a=3;a<=Math.sqrt(inp);a=a+2)
+        if(inp%a==0)
+        {
+            return false;    
+        }    
+        return true;    
     }
 }
+
