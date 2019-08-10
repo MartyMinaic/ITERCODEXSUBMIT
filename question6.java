@@ -9,7 +9,7 @@ Hence the difference between the sum of the squares of the first ten natural num
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.*/
 class question6
 {
-    /*With help of to loops we will find the square of the sum and sum of squares
+    /*With help of Mathemaitical formula of summation of series we will find the square of the sum and sum of squares
      * then we can simply add the values to a varriable and find the difference
      */
     public static void main(String args[])
