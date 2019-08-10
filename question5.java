@@ -3,39 +3,31 @@
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?*/
 class question5
 {
-    /* A number is divisible is all the numbers between 1 to 20 that means
-     * the number is divisble by all of the multiples of all the numbers between 1 to 20
-     * we need to take out all the factors of a number
-     * when we have all the factors of the numbers between then we will multiply all the factors
-     * after multiplication we get the required answer
-     */
-    public static void main(String args[])
+    public static void main()
     {
-        //all the prime numbers between 1 to 20 which can be a possible factors in formate {<number>,<number of factors>} initially 0
-        int ft[][] = {{2,0},{3,0},{5,0},{7,0},{11,0},{13,0},{17,0},{19,0}};
-        for(int a=1; a<=20; a++)
+        question5 ob = new question5();
+        long ans=1;
+        for(long j=2l;j<=20;j++)
         {
-            int t=a;
-            for(int b=0; b<8; b++)
+            ans=ob.lcm(ans,j);
+        }
+        System.out.println(ans);
+    }
+    long lcm(long a,long b)
+    {
+        long r=a*b/hcf(a,b);  
+        return r;
+    }
+    long hcf(long a, long b)
+    {   long tmp,rt=0;
+        tmp=Math.min(a,b);    
+        for(int i=1; i<=tmp; i++)
+        {
+            if(a%i==0&&b%i==0)
             {
-                //counter variable
-                int ct=0;
-                while(t%ft[b][0]==0)
-                {
-                    t=t/ft[b][0];
-                    ct++;
-                }
-                if(ft[b][1]<ct)
-                {
-                    ft[b][1]=ct;
-                }
+                rt=i;
             }
-        }
-        int ans=1;
-        for(int a=0; a<8; a++)
-        {
-            ans=ans*(int)Math.pow(ft[a][0],ft[a][1]);
-        }
-        System.out.print("ans = "+ans);
+        }    
+        return rt;    
     }
 }
