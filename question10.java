@@ -14,7 +14,7 @@ class question10
                 s=s+a;
             }
         }
-        System.out.println("Sum = "+s);
+        System.out.println(s);
     }
     boolean checkPrime(int inp)
     {    

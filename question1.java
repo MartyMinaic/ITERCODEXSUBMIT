@@ -13,6 +13,6 @@ class question1
                 s=s+a;
             }
         }
-        System.out.print("Sum = "+s);
+        System.out.print(s);
     }
 }

@@ -3,7 +3,7 @@
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?*/
 class question5
 {
-    public static void main()
+    public static void main(String args[])
     {
         question5 ob = new question5();
         long ans=1;

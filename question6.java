@@ -21,6 +21,6 @@ class question6
         n2=(int)((n*(n+1))/2.0);
         n2=n2*n2;
         int ans=n2-n1;
-        System.out.print("Answer = "+ans);
+        System.out.print(ans);
     }
 }
