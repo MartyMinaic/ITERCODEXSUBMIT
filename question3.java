@@ -1,18 +1,22 @@
-class question3
+public class question3
 {
-    public static void main(String Args[])
+    public static void main(String args[])
     {
-        long s=600851475143l;
-        long s_copy=s,ans=0;    
-        for(int a=2;a<=Math.sqrt(s_copy);a++)
+        long n=600851475143l;
+        long f=0;
+        int a=3;
+        while(n!=1)
         {
-            while((s%a)==0)
-            {   
-                ans=a;
-                s=s/a;    
-            }    
-        }    
-        System.out.print(ans);
+            if(n%a==0)
+            {
+                f=n;
+                n=n/a;
+            }
+            else
+            {
+                a=a+2;
+            }
+        }
+        System.out.println(f);
     }
 }
-            
